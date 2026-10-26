@@ -1,0 +1,20 @@
+name = "flipp-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Create with: npx wrangler kv namespace create QUOTA  — then paste the id here.
+[[kv_namespaces]]
+binding = "QUOTA"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+ENTITLEMENT_ID = "pro"
+# Free scans a new (non-paying) user gets before the hard paywall.
+FREE_SCANS = "1"
+# Safety cap per subscriber per day, keeps API cost bounded.
+PRO_DAILY_LIMIT = "40"
+
+# Secrets (never commit these):
+#   npx wrangler secret put ANTHROPIC_API_KEY
+#   npx wrangler secret put REVENUECAT_SECRET_KEY

@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Flipp",
+    "slug": "flipp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "flipp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/icon.png",
+      "bundleIdentifier": "com.example.flipp",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Flipp uses the camera to photograph items you want to price and sell.",
+        "NSPhotoLibraryUsageDescription": "Flipp lets you pick a photo of an item to price it."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#12B76A",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.example.flipp"
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#12B76A",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      "expo-localization",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Flipp uses the camera to photograph items you want to price and sell.",
+          "photosPermission": "Flipp lets you pick a photo of an item to price it.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
